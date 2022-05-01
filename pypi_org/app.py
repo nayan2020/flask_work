@@ -3,14 +3,9 @@ import flask
 app = flask.Flask(__name__)
 
 
-@app.route("/")
+@app.route('/')
 def index():
-    return flask.render_template('home/index.html')
-
-
-@app.route("/about")
-def about():
-    return flask.render_template('home/about.html')
+    return flask.render_template('index.html')
 
 
 if __name__ == '__main__':
