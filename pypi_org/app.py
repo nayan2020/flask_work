@@ -8,5 +8,10 @@ def index():
     return flask.render_template('home/index.html')
 
 
+@app.route('/about')
+def about():
+    return flask.render_template('home/about.html')
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
