@@ -1,6 +1,6 @@
 import datetime
 import sqlalchemy
-# import sqlalchemy.orm as orm
+import sqlalchemy.orm as orm
 
 
 from pypi_org.data.modelbase import SqlAlchemyBase
@@ -22,8 +22,8 @@ class Release(SqlAlchemyBase):
     size = sqlalchemy.Column(sqlalchemy.BigInteger)
 
     # package relationship
-    # package_id = sqlalchemy.Column(sqlalchemy.String, sqlalchemy.ForeignKey('packages.id'))
-    # package = orm.relation('Package')
+    package_id = sqlalchemy.Column(sqlalchemy.String, sqlalchemy.ForeignKey('packages.id'))
+    package = orm.relation('Package')
 
     def version_text(self):
         return '{}.{}.{}'.format(self.major_ver, self.minor_ver, self.build_ver)
