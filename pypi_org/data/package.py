@@ -1,4 +1,6 @@
 import datetime
+from typing import List
+
 import sqlalchemy as sa
 import sqlalchemy.orm as orm
 
@@ -25,7 +27,7 @@ class Package(SqlAlchemyBase):
     license = sa.Column(sa.String, index=True)
 
     # releases Relationship
-    releases = orm.relation("Release", order_by=[
+    releases: List[Release] = orm.relation("Release", order_by=[
         Release.major_ver.desc(),
         Release.minor_ver.desc(),
         Release.build_ver.desc(),
