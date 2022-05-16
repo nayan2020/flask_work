@@ -2,13 +2,11 @@ import datetime
 import sqlalchemy
 import sqlalchemy.orm as orm
 
-
 from pypi_org.data.modelbase import SqlAlchemyBase
 
 
 class Release(SqlAlchemyBase):
     __tablename__ = 'releases'
-    __table_args__ = {'mysql_engine': 'InnoDB'}
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
 

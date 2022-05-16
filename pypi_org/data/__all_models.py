@@ -4,13 +4,13 @@
 # are all loaded.
 
 
-# And all the new ones..
+# And all the new ones
 # noinspection PyUnresolvedReferences
 import pypi_org.data.downloads
 # noinspection PyUnresolvedReferences
-import pypi_org.data.licenses
-# noinspection PyUnresolvedReferences
 import pypi_org.data.languages
+# noinspection PyUnresolvedReferences
+import pypi_org.data.licenses
 # noinspection PyUnresolvedReferences
 import pypi_org.data.maintainers
 # noinspection PyUnresolvedReferences
