@@ -19,7 +19,7 @@ def global_init(db_file: str):  # put application's code'
     conn_str = 'sqlite:///' + db_file.strip()
     print(f'Connecting to DB with {conn_str}')
 
-    engine = sa.create_engine(conn_str, echo=True)
+    engine = sa.create_engine(conn_str, echo=False)
     __factory = orm.sessionmaker(bind=engine)
 
     # noinspection PyUnresolvedReferences
@@ -30,4 +30,6 @@ def global_init(db_file: str):  # put application's code'
 
 def create_session() -> Session:
     global __factory
-    return __factory()
+    session: Session = __factory()
+    session.expire_on_commit = False
+    return session

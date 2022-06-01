@@ -35,3 +35,9 @@ footer{
 footer a{
     color: #0c4668;
 }
+
+/*Error massage*/
+
+.error-msg {
+    color: #b30000;
+}
