@@ -1,7 +1,7 @@
 import flask
 
 from pypi_org.infrastructure.views_modifiers import response
-from services import cms_service
+from pypi_org.services import cms_service
 
 blueprint = flask.Blueprint('cms', __name__, template_folder='templates')
 
