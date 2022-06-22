@@ -4,6 +4,7 @@ import flask
 
 def response(*, mimetype: str = None, template_file: str = None):  # put application's code here
     def response_inner(f):  # put application's code here'
+
         # print("Wrapping in response {}".format(f.__name__), flush=True)
 
         @wraps(f)

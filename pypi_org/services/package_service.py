@@ -1,7 +1,6 @@
-# from _ast import List
+
 from typing import Optional
 
-import flask
 import sqlalchemy.orm as orm
 from pypi_org.data.package import Package
 from pypi_org.data.releases import Release
